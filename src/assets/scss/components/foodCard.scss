@@ -1,4 +1,4 @@
-@import '@/assets/scss/_utils';
+@use '@/assets/scss/_utils' as utils;
 
 .food{
   &-list{
@@ -7,11 +7,11 @@
     gap: 3rem 2rem;
   }
   &-card{
-    @include radius(2rem);
-    @include overflowHide;
+    @include utils.radius(2rem);
+    @include utils.overflowHide;
     box-shadow: $shadow;
     cursor: pointer;
-    @include transition(all);
+    @include utils.transition(all);
     &:hover{
       transform: translateY(-12px);
       background: $color-sub;

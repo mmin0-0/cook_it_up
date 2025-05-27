@@ -1,11 +1,11 @@
-@import '@/assets/scss/_utils';
+@use '@/assets/scss/_utils' as utils;
 
 .visual{
-  @include size(100%);
-  @include textAlign(center);
+  @include utils.size(100%);
+  @include utils.textAlign(center);
   padding: 4rem 2rem;
   .logo{
-    @include size(18rem);
+    @include utils.size(18rem);
     img{width: 100%;}
   }
   .title-wrap{margin: 2rem 0;}

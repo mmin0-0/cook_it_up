@@ -1,4 +1,4 @@
-@import '@/assets/scss/_utils';
+@use '@/assets/scss/_utils' as utils;
 
 *{box-sizing: border-box;}
 html{font-size: 10px;}
@@ -10,23 +10,23 @@ body{
   line-height: $lh-small;
   letter-spacing: -0.02em;
   &.fixed{
-    @include size(100vw, 100vh);
-    @include overflowHide;
+    @include utils.size(100vw, 100vh);
+    @include utils.overflowHide;
   }
 }
 
 .hide{
-  @include position(absolute);
+  @include utils.position(absolute);
   width: 1px!important;
   height: 1px!important;
   margin: -1px;
-  @include overflowHide;
+  @include utils.overflowHide;
   clip-path: polygon(0 0, 0 0, 0 0);
 }
 
 // layout
 #container{
-  @include size(100%);
+  @include utils.size(100%);
   max-width: 800px;
   min-height: 100vh;
   margin: 0 auto;
@@ -44,7 +44,7 @@ body{
 // input
 input{
   outline: none;
-  @include border(1px, solid, $color-gray-2);
+  @include utils.border(1px, solid, $color-gray-2);
   &:focus{border-color: $color-main;}
 }
 
@@ -52,12 +52,12 @@ input{
 .img-wrap{
   img{max-width: 100%;}
   &.w-100{
-    @include size(100%);
-    img{@include size(100%)}
+    @include utils.size(100%);
+    img{@include utils.size(100%)}
   }
   &.contain{
     img{
-      @include size(100%, 100%);
+      @include utils.size(100%, 100%);
       object-fit: cover;
     }
   }
@@ -66,7 +66,7 @@ input{
 // typography
 .typography{word-break: keep-all;}
 .tag-list{
-  @include flexBox(row, null, null, .8rem, wrap);
+  @include utils.flexBox(row, null, null, .8rem, wrap);
   span{
     color: $color-gray-3;
     &::before{
@@ -96,11 +96,11 @@ input{
 
 // tab menu
 .tab-menu{
-  @include flexBox(row, center, center, .6rem);
+  @include utils.flexBox(row, center, center, .6rem);
   button{
-    @include button($color-sub, $color-black, $size-sm, .4rem .8rem, null, 1.4rem);
-    @include transition(all);
-    @include border(1px, solid, $color-gray-2);
+    @include utils.button($color-sub, $color-black, $size-sm, .4rem .8rem, null, 1.4rem);
+    @include utils.transition(all);
+    @include utils.border(1px, solid, $color-gray-2);
     font-weight: $weight-medium;
     &:hover, &.on{
       background-color: $color-main;

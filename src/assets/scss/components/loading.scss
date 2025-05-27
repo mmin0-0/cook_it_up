@@ -1,4 +1,4 @@
-@import '@/assets/scss/_utils';
+@use '@/assets/scss/_utils' as utils;
 
 @keyframes dot-flashing {
   0% {
@@ -10,11 +10,11 @@
 }
 
 .loading{
-  @include flexBox(row, center, center);
+  @include utils.flexBox(row, center, center);
   .dot-flashing {
-    @include position(relative);
-    @include size(10px, 10px);
-    @include radius(50%);
+    @include utils.position(relative);
+    @include utils.size(10px, 10px);
+    @include utils.radius(50%);
     background: $color-main;
     color: $color-main;
     animation: dot-flashing 1s infinite linear alternate;
@@ -22,9 +22,9 @@
     &::before, &::after{
       content: "";
       display: inline-block;
-      @include size(100%, 100%);
-      @include radius(50%);
-      @include position(absolute, 0);
+      @include utils.size(100%, 100%);
+      @include utils.radius(50%);
+      @include utils.position(absolute, 0);
       background: $color-main;
       color: $color-main;
       animation: dot-flashing 1s infinite alternate;

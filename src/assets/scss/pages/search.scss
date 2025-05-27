@@ -1,15 +1,15 @@
-@import '@/assets/scss/_utils';
+@use '@/assets/scss/_utils' as utils;
 
 .title-wrap{
-  @include textAlign(center);
+  @include utils.textAlign(center);
   margin-bottom: 4rem;
   strong{color: $color-main;}
   .tab-menu{margin-top: 1rem;}
 }
 
 .more-button{
-  @include button($color-main, $color-white, $size-md, .8rem 3.2rem, null, 2rem);
-  @include transition(all);
+  @include utils.button($color-main, $color-white, $size-md, .8rem 3.2rem, null, 2rem);
+  @include utils.transition(all);
   font-weight: $weight-medium;
   margin: 2rem auto 0;
   display: block;
@@ -20,5 +20,5 @@
 }
 
 .no-result{
-  @include textAlign(center);
+  @include utils.textAlign(center);
 }

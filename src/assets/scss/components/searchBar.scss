@@ -1,22 +1,22 @@
-@import '@/assets/scss/_utils';
+@use '@/assets/scss/_utils' as utils;
 
 .search-wrap{
   max-width: 640px;
-  @include size(100%);
+  @include utils.size(100%);
   margin: 0 auto;
   .input-wrap{
-    @include position(relative);
+    @include utils.position(relative);
     input{
-      @include size(100%);
+      @include utils.size(100%);
       padding: 1.8rem 5rem 1.8rem 2rem;
-      @include radius(3rem);
-      @include overflowHide;
+      @include utils.radius(3rem);
+      @include utils.overflowHide;
       &::placeholder{font-size: $size-base;}
     }
     button{
-      @include button(transparent, $color-main);
-      @include size(3rem, 3rem);
-      @include position(absolute, 50%, null, null, 2rem);
+      @include utils.button(transparent, $color-main);
+      @include utils.size(3rem, 3rem);
+      @include utils.position(absolute, 50%, null, null, 2rem);
       transform: translateY(-50%);
       z-index: 1;
       font-size: $size-lg;

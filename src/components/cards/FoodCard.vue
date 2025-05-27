@@ -16,7 +16,6 @@
 </template>
 
 <script setup lang="ts">
-import ImgWrap from '@/components/common/ImgWrap.vue';
 import Typography from '@/components/common/Typography.vue';
 import { toRefs } from 'vue';
 import { useRouter } from 'vue-router';

@@ -28,6 +28,5 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-  @import '@/assets/scss/pages/home.scss';
   @import '@/assets/scss/components/foodCard.scss';
 </style>
