@@ -1,0 +1,35 @@
+@import '@/assets/scss/_utils';
+
+.food{
+  &-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 3rem 2rem;
+  }
+  &-card{
+    @include radius(2rem);
+    @include overflowHide;
+    box-shadow: $shadow;
+    cursor: pointer;
+    @include transition(all);
+    &:hover{
+      transform: translateY(-12px);
+      background: $color-sub;
+    }
+  }
+  &-info{
+    padding: 1.4rem 1.2rem;
+    > span{color: $color-gray-3;}
+    > strong{
+      display: block;
+      margin: .4rem 0 1rem;
+    }
+  }
+  &-preview{
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+

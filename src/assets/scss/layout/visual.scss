@@ -1,0 +1,12 @@
+@import '@/assets/scss/_utils';
+
+.visual{
+  @include size(100%);
+  @include textAlign(center);
+  padding: 4rem 2rem;
+  .logo{
+    @include size(18rem);
+    img{width: 100%;}
+  }
+  .title-wrap{margin: 2rem 0;}
+}

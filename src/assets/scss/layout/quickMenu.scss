@@ -1,0 +1,53 @@
+@import '@/assets/scss/_utils';
+
+.quick{
+  &-controls{
+    @include position(fixed, null, 2rem, null, 2rem);
+    @include flexBox(column, null, null, 1rem);
+    z-index: 10;
+    > button{
+      @include flexBox(row, center, center);
+      @include size(4rem, 4rem);
+      @include radius(50%);
+      background: $color-white;
+      box-shadow: $shadow;
+      font-size: $size-md;
+    }
+  }
+  .zzim{
+    @include size(100vw, 100vh);
+    @include position(fixed, 0, null, 0);
+    z-index: 9;
+    background: rgba($color-black, .65);
+    visibility: hidden;
+    z-index: -1;
+    &-list{
+      @include position(absolute, null, 2rem, null, 8rem);
+      @include radius(2rem);
+      background: $color-white;
+      padding: 1.2rem;
+      max-width: 30rem;
+      max-height: calc(100vh - 4rem);
+      min-height: 200px;
+      width: calc(100% - 10rem);
+      .food-info{
+        padding: .4rem;
+        border-bottom: 1px solid $color-main;
+        cursor: pointer;
+        @include transition(all);
+        @include flexBox(row, flex-start, center, .8rem);
+        &:hover, &:focus, &:active{background: $color-sub}
+        .preview-img{
+          @include size(10rem, 5rem);
+          @include radius(1rem);
+          overflow: hidden;
+          background-color: $color-gray-2;
+        }
+      }
+    }
+    &.on{
+      visibility: visible;
+      z-index: 9;
+    }
+  }
+}

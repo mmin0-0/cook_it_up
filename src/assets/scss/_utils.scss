@@ -1,0 +1,46 @@
+@mixin border($width, $type, $color){border: $width $type $color}
+@mixin radius($radius){border-radius: $radius}
+@mixin flexBox($direction: row, $justfy: null, $align: null, $gap: null, $wrap: null){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justfy;
+  align-items: $align;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+@mixin ellipsis($num: 1) {
+  @if ($num == 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $num;
+  }
+}
+@mixin position($p: absolute, $t: null, $b: null, $l: null,$r: null){
+  position: $p;
+  top: $t;
+  bottom: $b;
+  left: $l;
+  right: $r;
+}
+@mixin textAlign($align){text-align: $align;}
+@mixin button($bg: transparent, $textColor: null, $textSize: null, $padding: null, $border: null, $radius: null){
+  background-color: $bg;
+  color: $textColor;
+  font-size: $textSize;
+  padding: $padding;
+  border: $border;
+  border-radius: $radius;
+}
+@mixin transition($value, $time: .25s, $ani: ease){transition: $value $time $ani;}
+@mixin size($width: null, $height: null){
+  width: $width;
+  height: $height;
+}
+@mixin overflowHide{overflow: hidden;}

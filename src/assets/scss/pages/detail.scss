@@ -1,0 +1,68 @@
+@import '@/assets/scss/_utils';
+
+.detail-info{
+  max-width: 540px;
+  @include size(100%);
+  margin: 2rem auto 0;
+}
+.tit-wrap{
+  & + .cont-wrap{margin-top: 1.2rem;}
+}
+.preview-img{
+  @include radius(2rem);
+  @include overflowHide;
+}
+.info-wrap{
+  > div{margin-top: 3rem;}
+}
+.nutrition{
+  &-list{
+    @include flexBox(row, center, null, 2rem, wrap);
+  }
+  &-item{
+    position: relative;
+    @include size(8.4rem, 8.4rem);
+    @include radius(50%);
+    @include flexBox(row, center, center);
+    background: $color-main;
+    &:nth-child(2n){background: $color-sub;}
+    &::before{
+      content: '';
+      @include size(80%, 80%);
+      @include radius(50%);
+      @include position(absolute, 50%, null, 50%);
+      background: $color-white;
+      transform: translate(-50%, -50%);
+    }
+    > div{
+      @include position(relative);
+      @include textAlign(center);
+      z-index: 1;
+    }
+  }
+}
+
+.make{
+  &-list{
+    @include flexBox(column, null, null, 2rem);
+  }
+  &-item{
+    @include border(2px, solid, $color-sub);
+    @include radius(2rem);
+    @include flexBox(row, null, center, .8rem);
+    padding: 1.2rem;
+    @include xs{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    > div{
+      min-width: 40%;
+      @include size(40%);
+      @include radius(1rem);
+      @include overflowHide;
+      @include xs{
+        @include size(100%);
+      }
+    }
+  }
+}

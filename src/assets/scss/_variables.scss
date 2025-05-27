@@ -1,0 +1,37 @@
+// font-family
+$body-font-family: "Noto Sans KR", "Montserrat", sans-serif; 
+
+// font-size
+$size-sm: 1.4rem;
+$size-base: 1.6rem;
+$size-md: 1.8rem;
+$size-lg: 2rem;
+$size-xg: 2.4rem;
+
+// font-weight
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+
+// line-height
+$lh-small: 1;
+$lh-regular: 1.2;
+$lh-medium: 1.4;
+$lh-large: 1.6;
+
+// color
+$color-black : #111111; 
+$color-white : #ffffff; 
+$color-gray-1 : rgba(255, 255, 255, .6); 
+$color-gray-2 : #ededed; 
+$color-gray-3 : #888888; 
+$color-main : #E01832; 
+$color-main-active : #c11529; 
+$color-sub : #FAD1D7; 
+$shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+// media
+$notebook-breakpoint: 1240px;
+$tablet-breakpoint: 768px;
+$mobile-breakpoint: 420px;

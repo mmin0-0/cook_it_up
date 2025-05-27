@@ -1,0 +1,20 @@
+@import '@/assets/scss/_utils';
+
+.fixed-menu{
+  @include position(sticky, 0);
+  @include textAlign(center);
+  @include flexBox(row, space-between, center);
+  z-index: 8;
+  background: $color-main;
+  padding: 1.2rem 1rem;
+  *{color: $color-white;}
+  .title{
+    @include position(absolute, 50%, null, 50%);
+    transform: translate(-50%, -50%);
+  }
+  > button{
+    @include size(3rem, 3rem);
+    @include button(null, null, 2.4rem);
+    font-size: $size-lg;
+  }
+}

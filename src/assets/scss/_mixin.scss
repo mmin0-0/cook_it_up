@@ -1,0 +1,18 @@
+@import '@/assets/scss/_variables';
+
+@mixin lg{ // notebook
+  @media (max-width: #{$notebook-breakpoint}){
+    @content;
+  }
+}
+@mixin sm{ // tablet
+  @media (max-width: #{$tablet-breakpoint}){
+    @content;
+  }
+}
+
+@mixin xs{ // mobile
+  @media (max-width: #{$mobile-breakpoint}){
+    @content;
+  }
+}

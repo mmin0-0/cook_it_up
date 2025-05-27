@@ -1,0 +1,41 @@
+@import '@/assets/scss/_utils';
+
+@keyframes dot-flashing {
+  0% {
+    background: $color-main;
+  }
+  50%, 100% {
+    background: rgba($color-main, .2);
+  }
+}
+
+.loading{
+  @include flexBox(row, center, center);
+  .dot-flashing {
+    @include position(relative);
+    @include size(10px, 10px);
+    @include radius(50%);
+    background: $color-main;
+    color: $color-main;
+    animation: dot-flashing 1s infinite linear alternate;
+    animation-delay: .5s;
+    &::before, &::after{
+      content: "";
+      display: inline-block;
+      @include size(100%, 100%);
+      @include radius(50%);
+      @include position(absolute, 0);
+      background: $color-main;
+      color: $color-main;
+      animation: dot-flashing 1s infinite alternate;
+    }
+    &::before{
+      left: -15px;
+      animation-delay: 0s;
+    }
+    &::after{
+      left: 15px;
+      animation-delay: 1s;
+    }
+  }
+}
