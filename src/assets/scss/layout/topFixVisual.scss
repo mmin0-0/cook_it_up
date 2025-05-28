@@ -15,6 +15,6 @@
   }
   > button{
     @include utils.size(3rem, 3rem);
-    @include utils.button(null, null, 2.4rem);
+    @include utils.button(transparent, null, 2.4rem);
   }
 }

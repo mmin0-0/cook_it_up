@@ -28,10 +28,8 @@ const router = useRouter();
 
 const searchQuery = ref('');
 const onSearch = async () => {
-  // console.log(searchQuery)
   if(searchQuery.value.trim()){
     await store.dispatch('fetchFoods', searchQuery.value);
-    console.log('검색바 검색어:', searchQuery.value)
     router.push({path: '/search', query: {query: searchQuery.value}});
   }
 };

@@ -94,7 +94,7 @@ export default createStore<State>({
         commit('setAllFoods', cleanedData);
         commit('setFoods', previewFoods);
 
-        console.log('setFoods:', previewFoods);
+        // console.log('setFoods:', previewFoods);
 
       } catch(error){
         console.error('🍳 요리 데이터를 가져오는 중 오류 발생:', error);
@@ -114,7 +114,6 @@ export default createStore<State>({
       );
 
       commit('setFoods', filtered.slice(0, 15));
-      console.log('🔍 필터된 음식 리스트:', filtered.slice(0, 15));
     }
   },
   getters: {
