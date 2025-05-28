@@ -7,18 +7,6 @@
   .tab-menu{margin-top: 1rem;}
 }
 
-.more-button{
-  @include utils.button($color-main, $color-white, $size-md, .8rem 3.2rem, null, 2rem);
-  @include utils.transition(all);
-  font-weight: $weight-medium;
-  margin: 2rem auto 0;
-  display: block;
-  &:hover, &:focus, &:active, &.on{
-    background-color: $color-main-active;
-    color: $color-white;
-  }
-}
-
 .no-result{
   @include utils.textAlign(center);
 }

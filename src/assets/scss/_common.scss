@@ -38,7 +38,9 @@ body{
   position: relative;
   > section{
     padding: 0 2rem 2rem;
-    // &.w-100{padding: 0 0 2rem;}
+    &.not-found{
+      @include utils.textAlign(center);
+    }
   }
 }
 
@@ -99,7 +101,7 @@ input{
 .tab-menu{
   @include utils.flexBox(row, center, center, .6rem);
   button{
-    @include utils.button($color-sub, $color-black, $size-sm, .4rem .8rem, null, 1.4rem);
+    @include utils.button(transparent, $color-black, $size-sm, .4rem .8rem, null, 1.4rem);
     @include utils.transition(all);
     @include utils.border(1px, solid, $color-gray-2);
     font-weight: $weight-medium;
@@ -108,5 +110,18 @@ input{
       color: $color-white;
       border-color: $color-main;
     }
+  }
+}
+
+// button
+.secondry-button{
+  @include utils.button($color-main, $color-white, $size-base, .8rem 3.2rem, null, 2rem);
+  @include utils.transition(all);
+  font-weight: $weight-medium;
+  margin: 2rem auto 0;
+  display: block;
+  &:hover, &:focus, &:active, &.on{
+    background-color: $color-main-active;
+    color: $color-white;
   }
 }

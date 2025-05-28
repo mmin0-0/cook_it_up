@@ -15,7 +15,3 @@ type ButtonProps = {
 const props = defineProps<ButtonProps>();
 const { type, className } = toRefs(props);
 </script>
-
-<style lang="scss" scoped>
-button{background-color: transparent;}
-</style>

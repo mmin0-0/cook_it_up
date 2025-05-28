@@ -16,7 +16,7 @@
       </div>
       <base-button 
         v-if="visibleFoods.length < filteredFoods.length && visibleCount < 30"
-        class="more-button"
+        class="secondry-button"
         @click="loadMore"
       >+ 더보기</base-button>
     </div>
