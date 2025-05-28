@@ -5,14 +5,19 @@
         <font-awesome-icon :icon="['fas', 'arrow-up']" />
       </base-button>
       <base-button class="zzim-button" @click="zzimToggle">
-        <font-awesome-icon :icon="['far', 'heart']" />
+        <font-awesome-icon :icon="['far', 'heart']" style="color: #E01832" />
       </base-button>
     </div>
     <div class="zzim" :class="{on : isVisibleZzim}" @click="zzimToggle">
-      <div class="zzim-list" @click.stop>
-        <div v-for="food in savedFoods" :key="food.serialNum" class="food-info" @click="goToDetail(food)">
-          <ImgWrap className="contain preview-img" :src="food.mainImg" alt="음식이미지" />
-          <Typography size="sm" weight="medium">{{ food.name }}</Typography>
+      <div class="zzim-cont" @click.stop>
+        <div v-if="savedFoods.length === 0" class="empty">
+          <Typography size="sm" weight="medium">찜한 목록이 없습니다.</Typography>
+        </div>
+        <div v-else>
+          <div v-for="food in savedFoods" :key="food.serialNum" class="food-info" @click="goToDetail(food)">
+            <ImgWrap className="contain preview-img" :src="food.mainImg" alt="음식이미지" />
+            <Typography size="sm" weight="medium">{{ food.name }}</Typography>
+          </div>
         </div>
       </div>
     </div>

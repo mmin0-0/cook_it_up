@@ -35,6 +35,7 @@ body{
   @include xs{border: 0}
 }
 #content{
+  position: relative;
   > section{
     padding: 0 2rem 2rem;
     // &.w-100{padding: 0 0 2rem;}
